@@ -1,7 +1,5 @@
 'use strict';
 
-'use strict';
-
 (function(){
 
     var app = angular.module('myApp', ['ngCookies', 'ngRoute', 'myApp.productList', 'myApp.productBasket'])
