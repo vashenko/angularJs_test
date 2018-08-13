@@ -1,0 +1,14 @@
+<h2 ng-show="cart.length == 0">Basket is empty</h2>
+<div ng-show="cart.length !== 0">
+    <h1>Your purchases</h1>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="c in cart">
+            <h4>{{c.name}}
+            <span style="color:blue"> count: {{c.count}} </span>
+            price: {{c.price*c.count | currency}}
+            </h4>
+            <input class="btn btn-danger" type="button" ng-click="removeItemCart(c)" value="Remove from Basket" />
+        </li>
+    </ul>
+    Total : {{total | currency}}
+</div>
